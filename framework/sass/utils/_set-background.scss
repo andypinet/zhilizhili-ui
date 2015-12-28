@@ -1,0 +1,27 @@
+$bgDefault: (
+        background-size: cover,
+        background-position: center center,
+        background-repeat: no-repeat
+) !global;
+
+$bgContain: (
+        background-size: contain,
+        background-position: center center,
+        background-repeat: no-repeat
+) !global;
+
+@mixin setBg($url, $interface)  {
+  background-image: url($url);
+  @each $key, $value in $interface {
+    #{$key}: #{$value};
+  }
+}
+
+@mixin default-setBg($url) {
+  @include setBg($url, $bgDefault);
+}
+
+@mixin contain-setBg($url) {
+  @include setBg($url, $bgContain);
+}
+

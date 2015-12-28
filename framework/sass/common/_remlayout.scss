@@ -1,0 +1,22 @@
+$adaptDeviceWidth: 375 !global;
+
+@function adapt375to320($val) {
+    @return $val / $adaptDeviceWidth * 320;
+}
+
+
+@mixin rempolyfillset($map) {
+    $ret: ();
+    @each $key, $value in $map {
+        $ret: map-deep-set($ret, $key, adapt375to320($value));
+    }
+    $self: #{&};
+    @at-root  {
+        html {
+            #{$self} {
+                @include rem($ret);
+            }
+        }
+    }
+}
+

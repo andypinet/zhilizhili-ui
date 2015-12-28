@@ -1,0 +1,14 @@
+$polyfill: () !global;
+
+/// 给一个selector设置需要处理的polyfill的值
+@mixin polyfill-set-value($selector, $map: ()) {
+    $polyfill: map-deep-set($polyfill, $selector, $map) !global;
+    @each $key, $value in $map {
+        #{$key}: #{$value}
+    }
+}
+
+/// 自动设置selector为当前选择器 给一个设置需要处理的polyfill的值
+@mixin polyfill-easy-set($map) {
+    @include polyfill-set-value("#{&}", $map);
+}

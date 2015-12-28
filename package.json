@@ -1,0 +1,61 @@
+{
+  "_args": [
+    [
+      "zhilizhili-ui",
+      "/Users/lbc/Sites/zhilizhili"
+    ],
+    [
+      "zhilizhili-ui@^1.2.5",
+      "/Users/lbc/Sites/zhilizhili"
+    ]
+  ],
+  "_from": "zhilizhili-ui@>=1.2.5 <2.0.0",
+  "_id": "zhilizhili-ui@1.2.5",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/zhilizhili-ui",
+  "_nodeVersion": "5.1.1",
+  "_npmUser": {
+    "email": "lbc19920631@163.com",
+    "name": "lingbaichao"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "zhilizhili-ui",
+    "raw": "zhilizhili-ui@^1.2.5",
+    "rawSpec": "^1.2.5",
+    "scope": null,
+    "spec": ">=1.2.5 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_shrinkwrap": null,
+  "_spec": "zhilizhili-ui@^1.2.5",
+  "_where": "/Users/lbc/Sites/zhilizhili",
+  "author": "",
+  "dependencies": {},
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "429457eb06a33d1fd15a111c7106690ad51b64ff",
+    "tarball": "http://registry.npmjs.org/zhilizhili-ui/-/zhilizhili-ui-1.2.5.tgz"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "lingbaichao",
+      "email": "lbc19920631@163.com"
+    }
+  ],
+  "name": "zhilizhili-ui",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.7"
+}

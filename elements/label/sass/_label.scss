@@ -1,0 +1,79 @@
+@import "../../../../sassstd/src/sassstd";
+@import "../../../../sassyjson/stylesheets/SassyJSON";
+@import "../../../../scss-zhilizhili-mei/stylesheets/mei";
+
+@import "../../../../zhilizhili-ui/framework/sass/utils/full-parent";
+@import "../../../../zhilizhili-ui/framework/sass/utils/size";
+@import "../../../../zhilizhili-ui/framework/sass/utils/bem";
+@import "../../../../zhilizhili-ui/framework/sass/utils/query-selector";
+@import "../../../../zhilizhili-ui/framework/sass/common/sim-querySelector";
+
+@mixin interface-label() {
+    .label {
+        @content;
+    }
+}
+
+@mixin use-label() {
+    $defaults: (
+        ".label": (
+        )
+    );
+
+    @include interface-label() {
+        display: inline-block;
+        @include center-nav();
+        @include register-hook("label");
+        @content;
+    }
+}
+
+@mixin use-label--basic() {
+    $defaults: (
+        ".label--basic": (
+            "padding": 3px 6px,
+            "border": 1px solid transparent
+        )
+    );
+
+    .label--basic {
+        @include sim-querySelector($defaults, ("padding", "border"));
+        @include register-hook("label--basic");
+        &.grey {
+            color: get-custom-color("grey", "500");
+            border-color: get-custom-color("grey", "500");
+        }
+        &.blue {
+            color: get-custom-color("blue", "600");
+            border-color: get-custom-color("blue", "600");
+        }
+        @content;
+    }
+}
+
+@mixin use-label--colored() {
+    $defaults: (
+        ".label--colored": (
+            "padding": 3px 6px,
+            "border": 1px solid transparent
+        )
+    );
+
+    .label--colored {
+        @include sim-querySelector($defaults, ("padding", "border"));
+        @include register-hook("label--basic");
+        &.grey {
+            color: #ffffff;
+            background-color: get-custom-color("grey", "500");
+        }
+        &.blue {
+            color: #ffffff;
+            background-color: get-custom-color("blue", "600");
+        }
+        &.green {
+            color: #ffffff;
+            background-color: get-custom-color("green", "600");
+        }
+        @content;
+    }
+}
